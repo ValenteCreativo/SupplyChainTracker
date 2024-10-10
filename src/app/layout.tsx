@@ -19,11 +19,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Onchain App Template',
-  description: 'Built with OnchainKit',
+  title: 'Supply Chain Tracker ',
+  description: 'Supply Chain Tracker for NGOs to guarantee transparency and traceability for donations infrastructure',
   openGraph: {
-    title: 'Onchain App Template',
-    description: 'Built with OnchainKit',
+    title: 'Supply Chain Tracker',
+    description: 'Supply Chain Tracker for NGOs to guarantee transparency and traceability for donations infrastructure',
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
 };
