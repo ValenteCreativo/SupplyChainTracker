@@ -1,31 +1,14 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
-// Iconos personalizados para los marcadores
-const startIcon = new L.Icon({
-  iconUrl: 'https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN', // Ícono de inicio
-  iconSize: [40, 40],
-  iconAnchor: [20, 40],
-  popupAnchor: [0, -40],
-})
-
-const endIcon = new L.Icon({
-  iconUrl: 'https://coral-near-warbler-359.mypinata.cloud/ipfs/Qme3rRCgyk1ZNVWj3QJ9gXaEtH7qgct58Z1L5mC2N3V4ho', // Ícono de destino
-  iconSize: [40, 40],
-  iconAnchor: [20, 40],
-  popupAnchor: [0, -40],
-})
-
-const intermediateIcon = new L.Icon({
-  iconUrl: 'https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXTvJLVwBGxZHoHeLZfw5xRMQujsJmqm8k6dMboVquPf2', // Ícono de puntos intermedios
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
-})
+// Emojis como iconos personalizados
+const startIcon = L.divIcon({ className: 'custom-icon', html: '🚚', iconSize: [40, 40] })
+const endIcon = L.divIcon({ className: 'custom-icon', html: '🏁', iconSize: [40, 40] })
+const intermediateIcon = L.divIcon({ className: 'custom-icon', html: '🛣️', iconSize: [32, 32] })
 
 const LeafletMap = () => {
   const startPoint: [number, number] = [19.432608, -99.133209] // CDMX
@@ -43,12 +26,18 @@ const LeafletMap = () => {
     { position: [17.4736, -99.5387], label: "Chilpancingo: Cambio de transporte" },
   ]
 
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   useEffect(() => {
-    // Aquí podrías añadir alguna simulación de movimiento si lo deseas
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % route.length)
+    }, 2000) // Cambia cada 2 segundos
+
+    return () => clearInterval(interval)
   }, [])
 
   return (
-    <MapContainer center={startPoint} zoom={7} style={{ height: '400px', width: '100%' }} className="rounded-xl shadow-lg">
+    <MapContainer center={[18.5, -99.5]} zoom={5} style={{ height: '200px', width: '100%' }} className="rounded-xl shadow-lg">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -73,6 +62,11 @@ const LeafletMap = () => {
           <Popup>{point.label}</Popup>
         </Marker>
       ))}
+
+      {/* Marcador animado */}
+      <Marker position={route[currentIndex]} icon={L.divIcon({ className: 'custom-icon', html: '🔄', iconSize: [32, 32] })}>
+        <Popup>En tránsito...</Popup>
+      </Marker>
 
       {/* Información de rastreo estilo Uber/Amazon */}
       <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-md text-sm text-gray-700">

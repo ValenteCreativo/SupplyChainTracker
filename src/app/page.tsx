@@ -6,21 +6,6 @@ import LeafletMap from '../components/LeafletMap'
 import Link from 'next/link';
 
 export default function LandingPage() {
-  const [account, setAccount] = useState(null)
-
-  const connectWallet = async () => {
-    if (!window.ethereum) {
-      alert('MetaMask is required to connect!')
-      return
-    }
-
-    try {
-      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-      setAccount(accounts[0])
-    } catch (error) {
-      console.error('Error connecting wallet:', error)
-    }
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9]">
@@ -33,31 +18,24 @@ export default function LandingPage() {
           height={50}
         />
         <div className="flex items-center space-x-4">
-          {!account ? (
-            <button
-              onClick={connectWallet}
-              className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity"
-            >
-              Connect Wallet
+          <Link href="/dashboard" passHref>
+            <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
+              Launch App
             </button>
-          ) : (
-            <p className="text-sm font-medium text-[#A48460]">
-              Connected: {account.slice(0, 6)}...{account.slice(-4)}
-            </p>
-          )}
+          </Link>
         </div>
       </header>
   
       {/* Main content */}
-      <main className="pt-32 pb-12"> {/* Ajuste de padding superior e inferior */}
+      <main className="pt-32 pb-12">
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[url('https://coral-near-warbler-359.mypinata.cloud/ipfs/QmRdf3ABd6Ep6mzReuoHQZrrq6cRHqeA7qxRcUw5LmNLs')] bg-cover bg-center">
-          <div className="container mx-auto px-4 text-center text-[#4A3F35] space-y-8"> {/* Añadí más espacio entre los elementos */}
+          <div className="container mx-auto px-4 text-center text-[#4A3F35] space-y-8">
             <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
               Supply Cycle
             </h1>
             <p className="text-2xl mb-8 max-w-2xl mx-auto">
-            A tool designed to help NGOs ensure transparency and traceability in their donation supply chains, fostering donor trust and strengthening the humanitarian aid ecosystem.
+              Leveraging Base, attestations, and blockchain technology to transform the NGO supply chain. We ensure transparency, accountability, and real-time tracking of donations from start to finish, empowering humanitarian efforts with the reliability of Web3.
             </p>
             <Link href="/dashboard" passHref>
               <button className="bg-[#A48460] text-white px-8 py-3 rounded-full hover:bg-[#8F6C4E] transition-colors text-lg shadow-xl mt-16">
@@ -66,44 +44,44 @@ export default function LandingPage() {
             </Link>
   
             {/* Map Section */}
-            <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm"> {/* Ajusté el tamaño y apariencia del mapa */}
+            <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
               <LeafletMap className="rounded-lg shadow-lg" style={{ width: '100%', height: '300px' }} />
               <p className="mt-4 text-left text-sm text-gray-700">
-  <strong>Semilla Azul A.C.</strong> is sending donations from their recollection center in <strong> Mexico City</strong> to a distribution center in <strong>Acapulco, Guerrero</strong>. Last updated: October 11, 2024, 2:45 PM.
-  <br />
-  Order status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
-  <br />
-  Quantity: 50 boxes of supplies. Quality: Verified.
-</p>
+                <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 11, 2024, 2:45 PM.
+                <br />
+                Status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
+                <br />
+                Supplies: 50 verified boxes.
+              </p>
             </div>
           </div>
         </section>
-
-       {/* Sección 1: Donation Center */}
-       <section className="py-20">
+  
+        {/* Section 1: Attestations and Base-Powered Donation Center */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Donation Center</h2>
+            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Base and Attestations for Full Transparency</h2>
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <Image src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmQHEFfrPaRe9NPnv5FWzM1GTvKZDUexySNbph7TjAzhAy" alt="Donation Center" width={500} height={300} className="rounded-lg" />
               </div>
               <div className="md:w-1/2 md:pl-8">
                 <p className="text-lg text-[#4A3F35]">
-                  Every donation is recorded and tracked on the blockchain from the moment it arrives, ensuring full transparency and accountability.
+                  We leverage the power of Base and attestations to record every action in the donation lifecycle on the blockchain. Our platform provides full transparency, allowing donors to verify the journey of their donations from the donation center to the recipient, and ensuring accountability every step of the way.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Sección 2: Delivery Bus */}
+  
+        {/* Section 2: Talent and Real-Time Tracking */}
         <section className="py-20 bg-[#F1EDE9]">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Real-Time Tracking for Maximum Impact</h2>
+            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Talent and Real-Time Tracking</h2>
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 md:pr-8 order-2 md:order-1">
                 <p className="text-lg text-[#4A3F35]">
-                  Our cutting-edge tracking system revolutionizes aid distribution. Donors, recipients, and stakeholders can monitor the journey of goods in real-time, fostering trust and ensuring resources reach those in need efficiently. Embrace the power of blockchain for seamless, transparent logistics.
+                  Our platform integrates with Talent passport (Reputation attestation protocol), ensuring that all actors within the donation cycle are verified and trustworthy. Real-time tracking allows donors, recipients, and NGOs to view the status of shipments, creating a transparent and efficient ecosystem that maximizes the impact of humanitarian efforts.
                 </p>
               </div>
               <div className="md:w-1/2 mb-8 md:mb-0 order-1 md:order-2">
@@ -112,32 +90,32 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
-        {/* Sección 3: Distribution Center */}
+  
+        {/* Section 3: Secure Blockchain-Powered Distribution */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Efficient Resource Allocation</h2>
+            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Secure Blockchain-Powered Distribution</h2>
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <Image src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmRppd3a3Zwf45oTfi5iw9XKqoFCK8KLX4ekWwNv8joP66" alt="Distribution Center" width={500} height={300} className="rounded-lg" />
               </div>
               <div className="md:w-1/2 md:pl-8">
                 <p className="text-lg text-[#4A3F35]">
-                  Leverage blockchain-powered inventory management for unparalleled efficiency. Our system ensures optimal resource allocation with an immutable record of all transactions. Streamline your operations, reduce waste, and maximize the impact of every donation in your community.
+                  By using Base and blockchain technology, Supply Cycle ensures secure and reliable distribution of donations. Every action, from receiving to delivery, is recorded immutably, preventing fraud, theft, or waste. This technology creates a system of trust and efficiency in even the most challenging environments.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Sección 4: Aid Recipients */}
+  
+        {/* Section 4: Empowering Aid Recipients with Blockchain */}
         <section className="py-20 bg-[#F1EDE9]">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Empowering Aid Recipients</h2>
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 md:pr-8 order-2 md:order-1">
                 <p className="text-lg text-[#4A3F35]">
-                  Our blockchain-based system adds an extra layer of trust and accountability. Recipients can easily verify the origin and quality of their aid, ensuring fair distribution and building confidence in the entire process. Experience the future of humanitarian assistance with our innovative onchain solution.
+                  Recipients can verify the authenticity and condition of the donations they receive through blockchain-based attestations. This system ensures that aid reaches the intended recipients and that every transaction is accountable. Blockchain empowers recipients with transparency and trust.
                 </p>
               </div>
               <div className="md:w-1/2 mb-8 md:mb-0 order-1 md:order-2">
@@ -146,23 +124,18 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
-        {/* Why It Matters */}
-        <section className="py-20 bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-5xl font-extrabold mb-8">Building a Better World Onchain</h2>
-            <p className="text-lg mb-8">
-              The Supply Chain Tracker is revolutionizing the decentralized economy by providing unparalleled transparency and traceability in supply chains. Our platform fosters trust between donors, recipients, and stakeholders, addressing critical needs in your local community and beyond.
-            </p>
-            <p className="text-lg mb-8">
-              By leveraging the power of Base network and integrating Talent Protocol, we're not just creating a scalable, blockchain-backed solution - we're building a reputation system for providers and strategic allies. This innovation streamlines costs, enhances administrative processes, and showcases the boundless potential of decentralized technologies in real-world applications.
-            </p>
-            <p className="text-lg">
-              Join us in creating a future where every donation makes a measurable impact, and every stakeholder is empowered by the transparency of blockchain technology.
+  
+        {/* Section 5: Why Supply Cycle Matters */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Why Supply Cycle Matters</h2>
+            <p className="text-lg max-w-4xl mx-auto">
+              During this hackathon, we set out to transform the way the world handles humanitarian aid. Using cutting-edge technologies like Base, blockchain attestations, and real-time tracking, Supply Cycle brings unprecedented transparency, trust, and efficiency to the donation process. Our solution empowers NGOs, donors, and recipients alike, ensuring that every donation makes the impact it was intended for.
             </p>
           </div>
         </section>
       </main>
+  
 
       <footer className="bg-[#4A3F35] text-white py-8">
         <div className="container mx-auto px-4 text-center">
