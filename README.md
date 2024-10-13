@@ -1,5 +1,5 @@
 # Supply Cycle
-![Supply](https://github.com/user-attachments/assets/41426b73-df86-494f-9e59-caf549ee7ba0)
+![Camino](https://github.com/user-attachments/assets/b8b262a5-4ffc-4e1a-b7a5-21cdcee6d31a)
 
 <a name="readme-top"></a>
 
