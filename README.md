@@ -26,11 +26,11 @@ No olvidar subir el link del demo
  
   </a>
 
- <h3 align="center"> 🔵 Supply Cycle: Ensuring Transparency in Supply Chains 🔵</h3>
+ <h3 align="center"> 🏷️ Supply Cycle: Ensuring Transparency in Supply Chains 🏷️</h3>
 
   <p align="center">
 
-  [BASED LATAM | MÉXICO](https://baselatam.com/)
+  [BASED LATAM | MÉXICO 🇲🇽](https://baselatam.com/)
 
    <br />
     <a href="(https://github.com/ValenteCreativo/SupplyChainTracker)"><strong>Explore the docs »</strong></a>
@@ -66,7 +66,7 @@ No olvidar subir el link del demo
 
 <br />
 
-![Supply Cycle](https://tu-imagen.png) <!-- Asegúrate de reemplazar esto con un enlace adecuado si tienes una imagen del proyecto -->
+[Camino.pdf](https://github.com/user-attachments/files/17352602/Camino.pdf)
 
 **Supply Cycle** is a software that contains a comprehensive toolkit that guarantees transparency, trust, and traceability for supply chain operations focused on NGOs and companies.
 
@@ -92,7 +92,7 @@ The main challenge we faced was to successfully activate our smart contracts whi
 
 <!-- INSERTAR DEMO AQUÍ -->
 
-[![Demo Video](https://i.ibb.co/48PGvQk/Pocket-Youtube-Final.png)](https://www.youtube.com/watch?v=74cyIjHnwyc)
+[![Demo Video](https://www.youtube.com/watch?v=KPKQjvKQ5ik)
 
 Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 
@@ -102,7 +102,18 @@ Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 
 # How it Works
 
-<!-- Aquí puedes incluir información sobre cómo funciona el software, similar a la sección anterior -->
+Our app starts at the donation center, where goods are received and logged into the blockchain. This ensures that every item is accounted for from the very beginning, providing a transparent record of all donations.
+Delivery Bus
+
+As goods are transported, our app tracks their movement in real-time. Delivery personnel can easily update the status of shipments, ensuring that all stakeholders have up-to-date information on the location and condition of the goods.
+Delivery Bus
+Distribution Center
+Distribution Center
+
+At distribution centers, our app facilitates efficient inventory management and allocation of resources. Each transaction is recorded on the blockchain, creating an immutable record of how goods are distributed.
+Aid Recipients
+
+Finally, our app tracks the delivery of aid to recipients. This last step completes the chain of custody, providing a full picture of how donations are used and ensuring that they reach those in need.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,9 +121,23 @@ Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 
 Supply Cycle is proudly supported by the following sponsors:
 
-* [![Sponsor1][sponsor1-url]][sponsor1-link]
-* [![Sponsor2][sponsor2-url]][sponsor2-link]
-* [![Sponsor3][sponsor3-url]][sponsor3-link]
+Next.Js
+React
+TailwindCss
+AM Charts
+HardHat
+Ethers.Js
+Open Zeppelin
+JavaScript
+TypeScript
+Solidity
+Based LATAM México
+
+Tool Development
+Transparency
+Traceability
+Accountability
+Data provider: NASA’s EONET.
 
 These powerful partners have helped us create a seamless user experience and ensure the scalability and reliability of our project.
 
@@ -120,9 +145,8 @@ These powerful partners have helped us create a seamless user experience and ens
 
 # Team
 
-- [Tu Nombre](https://twitter.com/tu_usuario): Rol en el proyecto.
-- [Miembro 2](https://twitter.com/usuario): Rol en el proyecto.
-- [Miembro 3](https://twitter.com/usuario): Rol en el proyecto.
+- [Alexis Odette Villarreal Flores | ÁguilaCristal.psd](https://www.instagram.com/alexisodettee/)]: Project Manager, Designer and Communicator.
+- [Valentín Martínez Rojas | ValenteCreativo](https://www.instagram.com/valecreativo/): Project Manager, PR and Web Designer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
