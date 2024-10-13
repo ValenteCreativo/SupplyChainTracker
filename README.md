@@ -1,4 +1,5 @@
 # Supply Cycle
+![Supply](https://github.com/user-attachments/assets/41426b73-df86-494f-9e59-caf549ee7ba0)
 
 <a name="readme-top"></a>
 
