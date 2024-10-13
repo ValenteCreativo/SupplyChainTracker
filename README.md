@@ -66,9 +66,8 @@ No olvidar subir el link del demo
 
 <br />
 
-[Camino.pdf](https://github.com/user-attachments/files/17352602/Camino.pdf)
-
 **Supply Cycle** is a software that contains a comprehensive toolkit that guarantees transparency, trust, and traceability for supply chain operations focused on NGOs and companies.
+![5](https://github.com/user-attachments/assets/283376cb-ce27-484b-bc59-d437e1cb6dbb)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,12 +78,14 @@ We know how complicated it is to verify and secure all the processes behind the 
 **Supply Cycle** eliminates every uncertainty around these transactions by making them 100% transparent and traceable for both our donors and beneficiaries through smart contracts, attestations, and a mechanism to reward actors in the ecosystem that collaborate efficiently, enhancing our reputation system.
 
 Companies will also benefit from this service in different areas at any time.
+![6](https://github.com/user-attachments/assets/25d0a4f7-077b-4423-a4d7-9f91d066a09f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Challenges We Ran Into
 
 The main challenge we faced was to successfully activate our smart contracts while including attestations and developing live delivery tracking through QR codes for every stakeholder involved in the process. Additionally, we aimed to follow a simple user design for our web development that effectively communicates our main product.
+![Camino](https://github.com/user-attachments/assets/da2a1859-2ac3-44e6-a44b-195e9755b35f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +93,7 @@ The main challenge we faced was to successfully activate our smart contracts whi
 
 <!-- INSERTAR DEMO AQUÍ -->
 
-[![Demo Video](https://www.youtube.com/watch?v=KPKQjvKQ5ik)
+[![Demo Video]([https://www.youtube.com/watch?v=KPKQjvKQ5ik)]
 
 Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 
@@ -114,6 +115,7 @@ At distribution centers, our app facilitates efficient inventory management and 
 Aid Recipients
 
 Finally, our app tracks the delivery of aid to recipients. This last step completes the chain of custody, providing a full picture of how donations are used and ensuring that they reach those in need.
+![Camino](https://github.com/user-attachments/assets/92e010a0-905e-429c-8c2c-e9c1db21f285)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
