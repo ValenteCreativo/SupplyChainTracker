@@ -23,18 +23,17 @@ No olvidar subir el link del demo
 
 <br />
 <div align="center">
-  <a href="https://github.com/EthPocketHQ/Pocket">
-    <img src="https://i.ibb.co/fQTyzNt/Pocket-Landing-Taman-o-original-1.png">
+ 
   </a>
 
  <h3 align="center"> 🔵 Supply Cycle: Ensuring Transparency in Supply Chains 🔵</h3>
 
   <p align="center">
 
-  [🇬🇧 Eth Global London 2024 Hackathon Project 🇬🇧](https://ethglobal.com/events/london2024/)
+  [BASED LATAM | MÉXICO](https://baselatam.com/)
 
    <br />
-    <a href="https://github.com/EthPocketHQ/Pocket"><strong>Explore the docs »</strong></a>
+    <a href="(https://github.com/ValenteCreativo/SupplyChainTracker)"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/EthPocketHQ/Pocket">View Demo</a>
     ·
