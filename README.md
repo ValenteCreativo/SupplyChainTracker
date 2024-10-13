@@ -4,7 +4,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-
 </div>
 
 <!-- PROJECT INTRO -->
@@ -61,14 +60,13 @@ The main challenge we faced was to successfully activate our smart contracts whi
 
 ![3](https://github.com/user-attachments/assets/e9d39a1d-e156-419b-ba73-654a91083b46)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Demo
 
 <!-- INSERTAR DEMO AQUÍ -->
 
-[![Demo Video]([https://www.youtube.com/watch?v=KPKQjvKQ5ik)]
+[![Demo Video](https://img.youtube.com/vi/KPKQjvKQ5ik/0.jpg)](https://www.youtube.com/watch?v=KPKQjvKQ5ik)
 
 Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 
@@ -79,15 +77,10 @@ Run Supply Cycle Demo here: https://supplycycleapp.my.canva.site/main
 # How it Works
 
 Our app starts at the donation center, where goods are received and logged into the blockchain. This ensures that every item is accounted for from the very beginning, providing a transparent record of all donations.
-Delivery Bus
 
 As goods are transported, our app tracks their movement in real-time. Delivery personnel can easily update the status of shipments, ensuring that all stakeholders have up-to-date information on the location and condition of the goods.
-Delivery Bus
-Distribution Center
-Distribution Center
 
 At distribution centers, our app facilitates efficient inventory management and allocation of resources. Each transaction is recorded on the blockchain, creating an immutable record of how goods are distributed.
-Aid Recipients
 
 Finally, our app tracks the delivery of aid to recipients. This last step completes the chain of custody, providing a full picture of how donations are used and ensuring that they reach those in need.
 
@@ -99,23 +92,23 @@ Finally, our app tracks the delivery of aid to recipients. This last step comple
 
 Supply Cycle is proudly supported by the following sponsors:
 
-Next.Js
-React
-TailwindCss
-AM Charts
-HardHat
-Ethers.Js
-Open Zeppelin
-JavaScript
-TypeScript
-Solidity
-Based LATAM México
+- Next.Js
+- React
+- TailwindCss
+- AM Charts
+- HardHat
+- Ethers.Js
+- Open Zeppelin
+- JavaScript
+- TypeScript
+- Solidity
+- Based LATAM México
 
-Tool Development
-Transparency
-Traceability
-Accountability
-Data provider: NASA’s EONET.
+Tool Development:
+- Transparency
+- Traceability
+- Accountability
+- Data provider: NASA’s EONET.
 
 These powerful partners have helped us create a seamless user experience and ensure the scalability and reliability of our project.
 
@@ -123,7 +116,7 @@ These powerful partners have helped us create a seamless user experience and ens
 
 # Team
 
-- [Alexis Odette Villarreal Flores | ÁguilaCristal.psd](https://www.instagram.com/alexisodettee/)]: Project Manager, Designer and Communicator.
+- [Alexis Odette Villarreal Flores | ÁguilaCristal.psd](https://www.instagram.com/alexisodettee/): Project Manager, Designer and Communicator.
 - [Valentín Martínez Rojas | ValenteCreativo](https://www.instagram.com/valecreativo/): Project Manager, PR and Web Designer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -131,24 +124,8 @@ These powerful partners have helped us create a seamless user experience and ens
 <!-- MARKDOWN LINKS -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/EthPocketHQ/Pocket.svg?style=for-the-badge
-
 [contributors-url]: https://github.com/EthPocketHQ/Pocket/graphs/contributors
-
 [stars-shield]: https://img.shields.io/github/stars/EthPocketHQ/Pocket.svg?style=for-the-badge
-
 [stars-url]: https://github.com/EthPocketHQ/Pocket/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/EthPocketHQ/Pocket.svg?style=for-the-badge&logoColor=white
-
 [issues-url]: https://github.com/EthPocketHQ/Pocket/issues
-
-<!-- SPONSORS -->
-
-[sponsor1-url]: https://img.shields.io/badge/sponsor1-6FAEF6?style=for-the-badge&logo=sponsor1&logoColor=white
-[sponsor1-link]: https://sponsor1-link.com
-
-[sponsor2-url]: https://img.shields.io/badge/sponsor2-6FAEF6?style=for-the-badge&logo=sponsor2&logoColor=white
-[sponsor2-link]: https://sponsor2-link.com
-
-[sponsor3-url]: https://img.shields.io/badge/sponsor3-6FAEF6?style=for-the-badge&logo=sponsor3&logoColor=white
-[sponsor3-link]: https://sponsor3-link.com
