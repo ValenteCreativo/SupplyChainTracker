@@ -119,6 +119,7 @@ At distribution centers, our app facilitates efficient inventory management and 
 Aid Recipients
 
 Finally, our app tracks the delivery of aid to recipients. This last step completes the chain of custody, providing a full picture of how donations are used and ensuring that they reach those in need.
+
 ![Camino](https://github.com/user-attachments/assets/92e010a0-905e-429c-8c2c-e9c1db21f285)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
