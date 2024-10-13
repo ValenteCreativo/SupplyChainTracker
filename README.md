@@ -5,10 +5,6 @@
 
 <div align="center">
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 </div>
 
 <!-- PROJECT INTRO -->
@@ -20,31 +16,6 @@ No olvidar subir el link de la landing para test
 No olvidar subir el link del demo 
 
  -->
-
-<br />
-<div align="center">
- 
-  </a>
-
- <h3 align="center"> 🏷️ Supply Cycle: Ensuring Transparency in Supply Chains 🏷️</h3>
-
-  <p align="center">
-
-  [BASED LATAM | MÉXICO 🇲🇽](https://baselatam.com/)
-
-   <br />
-    <a href="(https://github.com/ValenteCreativo/SupplyChainTracker)"><strong>Explore the docs »</strong></a>
-    <br />
-    <a href="https://github.com/EthPocketHQ/Pocket">View Demo</a>
-    ·
-    <!-- Agregar Demo Link Aquí -->
-    <a href="https://github.com/EthPocketHQ/Pocket">Report Bug</a>
-    ·
-    <a href="https://github.com/EthPocketHQ/Pocket">Request Feature</a>
-  </p>
-</div>
-
-<br />
 
 <!-- TABLE OF CONTENTS -->
 
