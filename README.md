@@ -95,23 +95,24 @@ Finally, our app tracks the delivery of aid to recipients. This last step comple
 
 Supply Cycle is proudly supported by the following sponsors:
 
-Next.Js
-React
-TailwindCss
-AM Charts
-HardHat
-Ethers.Js
-Open Zeppelin
-JavaScript
-TypeScript
-Solidity
-Based LATAM México
+**Frontend**
+- Next.Js
+- React
+- TailwindCss
+- AM Charts
+- HardHat
+- Ethers.Js
+- Open Zeppelin
+- JavaScript
+- TypeScript
+- Solidity
+- Based LATAM México
 
-Tool Development
-Transparency
-Traceability
-Accountability
-Data provider: NASA’s EONET.
+**Tool Development**
+- Transparency
+- Traceability
+- Accountability
+- Data provider: NASA’s EONET.
 
 These powerful partners have helped us create a seamless user experience and ensure the scalability and reliability of our project.
 
