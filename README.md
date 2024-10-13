@@ -66,15 +66,11 @@ The main challenge we faced was to successfully activate our smart contracts whi
 
 # Demo
 
-<!-- INSERTAR DEMO AQUÍ -->
-
-<!-- Aquí utilizamos un iframe para mostrar el video de YouTube directamente en GitHub con tamaño ajustado -->
 <a href="https://www.youtube.com/watch?v=KPKQjvKQ5ik" target="_blank">
   <img src="https://img.youtube.com/vi/KPKQjvKQ5ik/0.jpg" alt="Demo Video" width="800" height="450">
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- GETTING STARTED -->
 
 # How it Works
 
