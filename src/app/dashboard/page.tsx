@@ -24,6 +24,7 @@ const Dashboard: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-[#4A3F35] mb-6 drop-shadow-lg">
           Welcome to Supply Cycle
         </h1>
+
         <p className="text-2xl text-[#4A3F35] mb-8 max-w-2xl">
           Choose the appropriate tooling based on your role. Whether you're an NGO managing resources or a donor tracking your impact, we've got you covered.
         </p>
@@ -40,8 +41,12 @@ const Dashboard: React.FC = () => {
             className="bg-[#A48460] text-white py-3 px-6 rounded-full text-lg hover:bg-[#8F6C4E] transition-colors">
             Donor's Tooling
           </button>
+
         </div>
+        
+
       </main>
+
 
       {/* Footer */}
       <footer className="bg-[#4A3F35] text-white py-8 mt-16 w-full flex-shrink-0">

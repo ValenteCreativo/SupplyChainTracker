@@ -44,7 +44,7 @@ export default function LandingPage() {
             </Link>
   
             {/* Map Section */}
-            <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
+<div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
   <LeafletMap />
   <p className="mt-4 text-left text-sm text-gray-700">
     <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 11, 2024, 2:45 PM.
@@ -52,6 +52,15 @@ export default function LandingPage() {
     Status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
     <br />
     Supplies: 50 verified boxes.
+    <br />
+    <a 
+      href="https://base-sepolia.easscan.org/attestation/view/0x0e8c8a4d811e0962672261697e11fda898ca0857b81a22247f8c535778533dd7"
+      className="text-blue-600 hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Explore NGO Registry and Milestone Attestations on the Blockchain
+    </a>
   </p>
 </div>
           </div>
