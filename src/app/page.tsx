@@ -45,15 +45,15 @@ export default function LandingPage() {
   
             {/* Map Section */}
             <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
-              <LeafletMap className="rounded-lg shadow-lg" style={{ width: '100%', height: '300px' }} />
-              <p className="mt-4 text-left text-sm text-gray-700">
-                <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 11, 2024, 2:45 PM.
-                <br />
-                Status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
-                <br />
-                Supplies: 50 verified boxes.
-              </p>
-            </div>
+  <LeafletMap />
+  <p className="mt-4 text-left text-sm text-gray-700">
+    <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 11, 2024, 2:45 PM.
+    <br />
+    Status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
+    <br />
+    Supplies: 50 verified boxes.
+  </p>
+</div>
           </div>
         </section>
   
