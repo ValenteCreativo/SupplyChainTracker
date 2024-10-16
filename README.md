@@ -93,7 +93,7 @@ Finally, our app tracks the delivery of aid to recipients. This last step comple
 
 # Built With
 
-Supply Cycle is proudly supported by the following sponsors:
+Supply Cycle is proudly supported by the following technologies:
 
 **Frontend**
 - Next.Js
@@ -103,7 +103,6 @@ Supply Cycle is proudly supported by the following sponsors:
 - HardHat
 - Ethers.Js
 - Open Zeppelin
-- JavaScript
 - TypeScript
 - Solidity
 - Based LATAM México
@@ -112,7 +111,6 @@ Supply Cycle is proudly supported by the following sponsors:
 - Transparency
 - Traceability
 - Accountability
-- Data provider: NASA’s EONET.
 
 These powerful partners have helped us create a seamless user experience and ensure the scalability and reliability of our project.
 
@@ -121,6 +119,6 @@ These powerful partners have helped us create a seamless user experience and ens
 # Team
 
 - [Alexis Odette Villarreal Flores | ÁguilaCristal.psd](https://www.instagram.com/alexisodettee/)]: Project Manager, Designer and Communicator.
-- [Valentín Martínez Rojas | ValenteCreativo](https://www.instagram.com/valecreativo/): Project Manager, PR and Web Designer
+- [Valentín Martínez Rojas | ValenteCreativo](https://www.instagram.com/valecreativo/): Project Manager, PR and Full-Stack Developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
