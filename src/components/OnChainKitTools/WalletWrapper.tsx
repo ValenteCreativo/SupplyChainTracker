@@ -32,7 +32,7 @@ export default function WalletWrapper({
         <ConnectWallet
           withWalletAggregator={withWalletAggregator}
           text={text}
-          className={className}
+          className={`text-white ${className}`}  // Forzamos el texto blanco aquí
         >
           <Avatar className="h-6 w-6" />
           <Name />

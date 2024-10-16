@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import LeafletMap from '../components/LeafletMap'
+import LeafletMap from '../components/Landing-General/LeafletMap'
 import Link from 'next/link';
 
 export default function LandingPage() {
