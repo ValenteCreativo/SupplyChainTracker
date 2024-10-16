@@ -21,37 +21,36 @@ type WalletWrapperParams = {
   className?: string;
   withWalletAggregator?: boolean;
 };
+
 export default function WalletWrapper({
   className,
   text,
   withWalletAggregator = false,
 }: WalletWrapperParams) {
   return (
-    <>
-      <Wallet>
-        <ConnectWallet
-          withWalletAggregator={withWalletAggregator}
-          text={text}
-          className={`text-white ${className}`}  // Forzamos el texto blanco aquí
-        >
-          <Avatar className="h-6 w-6" />
+    <Wallet>
+      <ConnectWallet
+        withWalletAggregator={withWalletAggregator}
+        text={text}
+        className={`text-white ${className}`} 
+      >
+        <Avatar className="h-6 w-6" />
+        <Name />
+      </ConnectWallet>
+      <WalletDropdown>
+        <Identity className="px-4 pt-3 pb-2" hasCopyAddressOnClick={true}>
+          <Avatar />
           <Name />
-        </ConnectWallet>
-        <WalletDropdown>
-          <Identity className="px-4 pt-3 pb-2" hasCopyAddressOnClick={true}>
-            <Avatar />
-            <Name />
-            <Address />
-            <EthBalance />
-          </Identity>
-          <WalletDropdownBasename />
-          <WalletDropdownLink icon="wallet" href="https://wallet.coinbase.com">
-            Go to Wallet Dashboard
-          </WalletDropdownLink>
-          <WalletDropdownFundLink />
-          <WalletDropdownDisconnect />
-        </WalletDropdown>
-      </Wallet>
-    </>
+          <Address />
+          <EthBalance />
+        </Identity>
+        <WalletDropdownBasename />
+        <WalletDropdownLink icon="wallet" href="https://wallet.coinbase.com">
+          Go to Wallet Dashboard
+        </WalletDropdownLink>
+        <WalletDropdownFundLink />
+        <WalletDropdownDisconnect />
+      </WalletDropdown>
+    </Wallet>
   );
 }

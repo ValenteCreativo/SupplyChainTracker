@@ -18,7 +18,7 @@ export default function LandingPage() {
           height={50}
         />
         <div className="flex items-center space-x-4">
-          <Link href="/dashboard" passHref>
+          <Link href="/Home" passHref>
             <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
               Launch App
             </button>
@@ -37,7 +37,7 @@ export default function LandingPage() {
             <p className="text-2xl mb-8 max-w-2xl mx-auto">
               Leveraging Base, attestations, and blockchain technology to transform the NGO supply chain. We ensure transparency, accountability, and real-time tracking of donations from start to finish, empowering humanitarian efforts with the reliability of Web3.
             </p>
-            <Link href="/dashboard" passHref>
+            <Link href="/Home" passHref>
               <button className="bg-[#A48460] text-white px-8 py-3 rounded-full hover:bg-[#8F6C4E] transition-colors text-lg shadow-xl mt-16">
                 Launch App
               </button>

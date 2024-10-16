@@ -18,9 +18,14 @@ const DonorFlowDiagram: React.FC = () => {
               title: "2. Donor Dashboard",
               steps: [
                 "Campaign Search and Filter",
-                "Campaign Details",
-                "Donate to a Campaign",
-                "View Past Donations and Milestones"
+                "Campaign Details"
+              ]
+            },
+            {
+              title: "3. Donor Dashboard",
+              steps: [
+                "Campaign Search and Filter",
+                "Campaign Details"
               ]
             },
             {
