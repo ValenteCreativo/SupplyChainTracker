@@ -32,6 +32,15 @@ const NGO: React.FC = () => {
     <div className="space-y-6 flex flex-col items-center">
       <SignupButton className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity" />
 
+      <a 
+  href="https://base-sepolia.easscan.org/attestation/attestWithSchema/0xbe316d1b4853bff8f96d3addef2aaaada363d29e7a04fbf3888278d696752616" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+    Create NGO
+  </button>
+</a>
       <Link href="/Home" passHref>
                 <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
                   Go to dashboard
