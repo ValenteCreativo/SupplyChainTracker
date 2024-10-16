@@ -34,7 +34,7 @@ export default function LandingPage() {
             <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
               Supply Cycle
             </h1>
-            <p className="text-2xl mb-8 max-w-2xl mx-auto">
+            <p className="text-1xl mb-8 max-w-2xl mx-auto">
               Leveraging Base, attestations, and blockchain technology to transform the NGO supply chain. We ensure transparency, accountability, and real-time tracking of donations from start to finish, empowering humanitarian efforts with the reliability of Web3.
             </p>
             <Link href="/Home" passHref>
@@ -47,9 +47,9 @@ export default function LandingPage() {
 <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
   <LeafletMap />
   <p className="mt-4 text-left text-sm text-gray-700">
-    <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 11, 2024, 2:45 PM.
+    <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 16, 2024, 2:45 PM.
     <br />
-    Status: In transit. Estimated arrival: October 12, 2024, 10:00 AM.
+    Status: In transit. Estimated arrival: October 18, 2024, 10:00 AM.
     <br />
     Supplies: 50 verified boxes.
     <br />
@@ -59,7 +59,7 @@ export default function LandingPage() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Explore NGO Registry and Milestone Attestations on the Blockchain
+      Explore semillaazul.base.eth Impact Reports Attestations on the Blockchain
     </a>
   </p>
 </div>

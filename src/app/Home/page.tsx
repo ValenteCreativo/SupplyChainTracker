@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
           Welcome to Supply Cycle
         </h1>
 
-        <p className="text-2xl text-[#4A3F35] mb-8 max-w-2xl">
+        <p className="text-1xl text-[#4A3F35] mb-8 max-w-2xl">
           Choose the appropriate tooling based on your role. Whether you're an NGO managing resources or a donor tracking your impact, we've got you covered.
         </p>
 
