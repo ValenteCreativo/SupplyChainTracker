@@ -9,7 +9,7 @@ const DonorFlowDiagram: React.FC = () => {
         <div className="flex justify-between items-start overflow-x-auto pb-5">
           {[
             {
-              icon: <FaUserPlus size={20} />, // Puedes ajustar el tamaño del ícono
+              icon: <FaUserPlus size={20} />,
               title: "Register",
             },
             {
@@ -26,8 +26,8 @@ const DonorFlowDiagram: React.FC = () => {
               className="bg-[#F1EDE9] border-2 border-[#A48460] rounded-lg p-4 m-2 w-48 text-center relative flex-shrink-0"
             >
               <div className="font-bold mb-2 text-[#A48460] flex flex-col items-center justify-center">
-                {step.icon} {/* Ícono arriba del texto */}
-                <span className="mt-2">{step.title}</span> {/* Texto debajo del ícono */}
+                {step.icon}
+                <span className="mt-2">{step.title}</span>
               </div>
               {index !== array.length - 1 && (
                 <div className="absolute top-1/2 -right-6 transform -translate-y-1/2 text-2xl text-[#A48460]">
