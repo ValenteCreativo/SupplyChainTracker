@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-const LeafletMap = () => {
+const LeafletMapComponent = () => {
   const startPoint: [number, number] = [19.432608, -99.133209]; // CDMX
   const endPoint: [number, number] = [16.853109, -99.823653]; // Acapulco
 
@@ -77,6 +77,6 @@ const LeafletMap = () => {
       </Marker>
     </MapContainer>
   );
-}
+};
 
-export default LeafletMap;
+export default LeafletMapComponent;
