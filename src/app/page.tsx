@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import LeafletMap from 'src/components/Landing-General/LeafletMap'
+import MapboxMap from 'src/components/Landing-General/MapboxMap';
+// import LeafletMap from 'src/components/Landing-General/LeafletMap'
 import Link from 'next/link';
 
 export default function LandingPage() {
@@ -42,9 +43,9 @@ export default function LandingPage() {
                 Launch App
               </button>
             </Link>
-   {/* Map Section */}
-   <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 backdrop-blur-sm">
-  <LeafletMap />
+  
+            <div className="mt-12 w-full max-w-3xl mx-auto z-10 relative rounded-lg shadow-lg bg-white bg-opacity-80 p-6 pb-2 backdrop-blur-sm h-auto max-h-[600px] overflow-y-auto">
+  <MapboxMap />
   <p className="mt-4 text-left text-sm text-gray-700">
     <strong>Semilla Azul A.C.</strong> is delivering donations from <strong>Mexico City</strong> to <strong>Acapulco, Guerrero</strong>. Last update: October 16, 2024, 2:45 PM.
     <br />
@@ -58,10 +59,11 @@ export default function LandingPage() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Explore semillaazul.base.eth Impact Reports Attestations on the Blockchain
+      Explore <b>semillaazul.base.eth</b> Impact Report Attestations on the Blockchain
     </a>
   </p>
-</div>           
+</div>
+           
           </div>
         </section>
   
