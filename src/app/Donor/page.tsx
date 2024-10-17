@@ -40,7 +40,7 @@ const NGO: React.FC = () => {
               className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
             />
 
-              <Link href="/Home" passHref>
+              <Link href="/DonorDashboard" passHref>
                 <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
                   Go to dashboard
                 </button>
