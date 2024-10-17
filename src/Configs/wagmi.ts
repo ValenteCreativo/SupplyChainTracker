@@ -12,9 +12,6 @@ import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 
 export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
-  
-  // Log para ver si el valor está disponible
-  console.log('NEXT_PUBLIC_WC_PROJECT_ID:', projectId);
 
   if (!projectId) {
     const providerErrMessage =
