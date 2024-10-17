@@ -12,6 +12,10 @@ import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 
 export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
+  
+  // Log para ver si el valor está disponible
+  console.log('NEXT_PUBLIC_WC_PROJECT_ID:', projectId);
+
   if (!projectId) {
     const providerErrMessage =
       'To connect to all Wallets you need to provide a NEXT_PUBLIC_WC_PROJECT_ID env variable';
@@ -38,7 +42,6 @@ export function useWagmiConfig() {
 
     const wagmiConfig = createConfig({
       chains: [base, baseSepolia],
-      // turn off injected provider discovery
       multiInjectedProviderDiscovery: false,
       connectors,
       ssr: true,
