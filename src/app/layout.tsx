@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../Configs/config';
 
-import './global.css';
+import 'src/styles/global.css';
 import '@coinbase/onchainkit/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import dynamic from 'next/dynamic';

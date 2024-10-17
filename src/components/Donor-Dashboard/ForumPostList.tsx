@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import ForumPostItem from './ForumPostItem'; // Asegurando import default
 

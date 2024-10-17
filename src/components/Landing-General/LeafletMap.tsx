@@ -1,12 +1,20 @@
+'use client';
+
 import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet';
+import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+
+// Carga los componentes dinámicamente, deshabilitando el SSR
+const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
+const Polyline = dynamic(() => import('react-leaflet').then(mod => mod.Polyline), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then(mod => mod.Popup), { ssr: false });
 
 const LeafletMapComponent = () => {
   const startPoint: [number, number] = [19.432608, -99.133209]; // CDMX
   const endPoint: [number, number] = [16.853109, -99.823653]; // Acapulco
-
   const route: [number, number][] = [
     [19.432608, -99.133209], // CDMX
     [18.766667, -99.0], // Intermediario en Morelos
@@ -29,6 +37,11 @@ const LeafletMapComponent = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Verifica si estamos en el cliente antes de renderizar
+  if (typeof window === 'undefined') {
+    return null; // No renderizar en el servidor
+  }
+
   // Asegúrate de que el marcador animado tenga la posición correcta
   const animatedMarkerPosition: [number, number] = route[currentIndex];
 
@@ -38,7 +51,6 @@ const LeafletMapComponent = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {/* Marcador en el punto de partida */}
       <Marker 
         position={startPoint} 
         icon={L.divIcon({ html: '<div style="font-size: 24px;">🚚</div>', iconSize: [40, 40] })}
@@ -46,7 +58,6 @@ const LeafletMapComponent = () => {
         <Popup><strong>Ciudad de México:</strong> Punto de recolección inicial</Popup>
       </Marker>
 
-      {/* Marcador en el punto final */}
       <Marker 
         position={endPoint} 
         icon={L.divIcon({ html: '<div style="font-size: 24px;">🏁</div>', iconSize: [40, 40] })}
@@ -54,10 +65,8 @@ const LeafletMapComponent = () => {
         <Popup><strong>Acapulco:</strong> Destino final del envío</Popup>
       </Marker>
 
-      {/* Línea que representa la ruta */}
       <Polyline positions={route} color="blue" weight={5} opacity={0.7} dashArray="10,10" />
 
-      {/* Marcadores y detalles en los puntos intermedios */}
       {intermediatePoints.map((point, index) => (
         <Marker 
           key={index} 
@@ -68,7 +77,6 @@ const LeafletMapComponent = () => {
         </Marker>
       ))}
 
-      {/* Marcador animado */}
       <Marker 
         position={animatedMarkerPosition} 
         icon={L.divIcon({ html: '<div style="font-size: 20px;">🔄</div>', iconSize: [32, 32] })}

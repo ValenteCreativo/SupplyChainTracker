@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { FaUserPlus, FaBuilding, FaTachometerAlt, FaChartLine, FaBullhorn } from 'react-icons/fa'; // Importa íconos
 

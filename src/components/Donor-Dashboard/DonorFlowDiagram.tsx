@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { FaUserPlus, FaTachometerAlt, FaCheckCircle } from 'react-icons/fa';
 

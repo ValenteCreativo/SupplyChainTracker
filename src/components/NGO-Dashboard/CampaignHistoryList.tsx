@@ -1,3 +1,5 @@
+'use client'
+
 const campaigns = [
     { name: 'Water Relief 2023', status: 'Completed', milestones: '90%', impact: 'High', date: 'Jan 2023 - Jul 2023' },
     { name: 'Food Aid 2022', status: 'In Progress', milestones: '60%', impact: 'Medium', date: 'Aug 2022 - Present' },

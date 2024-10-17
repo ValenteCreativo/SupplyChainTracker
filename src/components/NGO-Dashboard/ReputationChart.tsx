@@ -1,3 +1,5 @@
+'use client'
+
 import { RadialBarChart, RadialBar, Legend, Tooltip, ResponsiveContainer } from 'recharts';
 
 const reputationData = [
