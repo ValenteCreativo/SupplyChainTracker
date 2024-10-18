@@ -6,6 +6,7 @@ import { Grid } from "@visx/grid"
 import { Group } from "@visx/group"
 import { scaleBand, scaleLinear } from "@visx/scale"
 import { useTooltip, useTooltipInPortal, defaultStyles } from "@visx/tooltip"
+import { localPoint } from '@visx/event'
 
 interface ChartData {
   [key: string]: number | string

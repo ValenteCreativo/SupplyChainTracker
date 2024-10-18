@@ -52,91 +52,67 @@ const ImpactTracker: React.FC = () => {
           
           <TabsContent value="overview">
             <div className="grid gap-8 md:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Your Impact</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ChartContainer
-                    config={{
-                      Monetary: {
-                        label: "Monetary",
-                        color: "hsl(var(--chart-1))",
-                      },
-                      "In-Kind": {
-                        label: "In-Kind",
-                        color: "hsl(var(--chart-2))",
-                      },
-                      Volunteering: {
-                        label: "Volunteering",
-                        color: "hsl(var(--chart-3))",
-                      },
-                    }}
-                    className="h-[300px]"
-                  >
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={donationData}
-                          cx="50%"
-                          cy="50%"
-                          labelLine={false}
-                          outerRadius={100}
-                          fill="#8884d8"
-                          dataKey="value"
-                          label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                        >
-                          {donationData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                          ))}
-                        </Pie>
-                        <ChartTooltip />
-                      </PieChart>
-                    </ResponsiveContainer>
-                  </ChartContainer>
-                  <div className="grid grid-cols-3 gap-4 text-center mt-4">
-                    <div>
-                      <p className="text-sm text-gray-500">Monetary</p>
-                      <p className="text-lg font-semibold">$4,000</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">In-Kind</p>
-                      <p className="text-lg font-semibold">15 items</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Volunteering</p>
-                      <p className="text-lg font-semibold">25 hours</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <Card>
+  <CardHeader>
+    <CardTitle>Your Impact</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <ChartContainer className="h-[300px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={donationData}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            outerRadius={100}
+            fill="#8884d8"
+            dataKey="value"
+            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+          >
+            {donationData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <ChartTooltip />
+        </PieChart>
+      </ResponsiveContainer>
+    </ChartContainer>
+    <div className="grid grid-cols-3 gap-4 text-center mt-4">
+      <div>
+        <p className="text-sm text-gray-500">Monetary</p>
+        <p className="text-lg font-semibold">$4,000</p>
+      </div>
+      <div>
+        <p className="text-sm text-gray-500">In-Kind</p>
+        <p className="text-lg font-semibold">15 items</p>
+      </div>
+      <div>
+        <p className="text-sm text-gray-500">Volunteering</p>
+        <p className="text-lg font-semibold">25 hours</p>
+      </div>
+    </div>
+  </CardContent>
+</Card>
               
               <Card>
-                <CardHeader>
-                  <CardTitle>Campaign Progress</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ChartContainer
-                    config={{
-                      value: {
-                        label: "Value",
-                        color: "hsl(var(--chart-1))",
-                      },
-                    }}
-                    className="h-[300px]"
-                  >
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={campaignData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <ChartTooltip />
-                        <Bar dataKey="value" fill="#C2A676" />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </ChartContainer>
-                </CardContent>
-              </Card>
+  <CardHeader>
+    <CardTitle>Campaign Progress</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <ChartContainer className="h-[300px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={campaignData}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <ChartTooltip />
+          <Bar dataKey="value" fill="#C2A676" />
+        </BarChart>
+      </ResponsiveContainer>
+    </ChartContainer>
+  </CardContent>
+</Card>
             </div>
           </TabsContent>
           
