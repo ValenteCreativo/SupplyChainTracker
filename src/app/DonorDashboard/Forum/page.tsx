@@ -153,7 +153,6 @@ const NewIdeaForm: React.FC = () => {
   )
 }
 
-// SearchBar Component
 const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) => {
   const [query, setQuery] = useState('')
 
@@ -182,7 +181,7 @@ const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }
   )
 }
 
-// IdeaList Component
+
 const IdeaList: React.FC = () => {
   const [ideas, setIdeas] = useState<Idea[]>([
     {
@@ -205,7 +204,7 @@ const IdeaList: React.FC = () => {
       authorReputation: 95,
       tags: ["AI", "impact assessment", "effective altruism"]
     },
-    // Add more ideas here
+
   ])
 
   const [filteredIdeas, setFilteredIdeas] = useState<Idea[]>(ideas)
@@ -230,7 +229,7 @@ const IdeaList: React.FC = () => {
   )
 }
 
-// ForumLayout Component
+
 const ForumLayout: React.FC<ForumLayoutProps> = ({ children }) => (
   <div className="max-w-4xl mx-auto mt-24 p-6">
     <h1 className="text-3xl font-bold text-center text-[#4A3F35] mb-8">Collaborative Forum</h1>
@@ -242,7 +241,7 @@ const ForumLayout: React.FC<ForumLayoutProps> = ({ children }) => (
   </div>
 )
 
-// Footer Component
+
 const Footer: React.FC = () => (
   <footer className="bg-[#4A3F35] text-white py-8 mt-16 w-full flex-shrink-0">
     <div className="container mx-auto text-center">
@@ -251,10 +250,10 @@ const Footer: React.FC = () => (
   </footer>
 )
 
-// Main Component
+
 export default function CollaborativeForum() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col justify-between">
+    <div className="min-h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col justify-between">
       <Header />
       <ForumLayout>
         <NewIdeaForm />
