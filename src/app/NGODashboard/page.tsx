@@ -36,7 +36,7 @@ const Dashboard: React.FC = () => {
             {/* Register NGO Section */}
             <div className="flex flex-col items-center bg-white shadow-lg p-6 rounded-lg">
               <h2 className="text-xl font-semibold mb-4 text-[#4A3F35]">Register NGO</h2>
-              <p className="text-center text-gray-600 mb-6">Register your NGO to manage campaigns and receive transparency attestations.</p>
+              <p className="text-center text-gray-600 mb-6">Register your NGO to link your impact data to your wallet.</p>
               <a 
                 href="https://base-sepolia.easscan.org/attestation/attestWithSchema/0xbe316d1b4853bff8f96d3addef2aaaada363d29e7a04fbf3888278d696752616" 
                 target="_blank" 

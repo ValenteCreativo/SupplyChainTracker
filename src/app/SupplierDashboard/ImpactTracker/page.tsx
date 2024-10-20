@@ -10,11 +10,13 @@ import { Button } from "src/components/UI/button"
 import { Share2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import SharePopup from 'src/components/Supplier-Dashboard/SharePopup'
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
 
 const ImpactTracker: React.FC = () => {
   const [activeTab, setActiveTab] = useState("overview")
+  const impactText = "Check out the amazing impact I've made through donations and volunteering! @ https://supplycycle.netlify.app/";
 
   // Datos de donación actualizados
   const donationData = [
@@ -183,9 +185,7 @@ const ImpactTracker: React.FC = () => {
                 Share the difference you're making with your community on social media!
               </p>
               <div className="flex items-center space-x-4">
-                <Button className="flex items-center">
-                  Share on Social Media <Share2 className="ml-2" />
-                </Button>
+                <SharePopup userImpact={impactText} />
                 <Button variant="outline" className="flex items-center">
                   Share via Farcaster
                 </Button>

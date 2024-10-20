@@ -30,7 +30,7 @@ type ForumLayoutProps = {
 // Header Component
 const Header: React.FC = () => (
   <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-white bg-opacity-70 backdrop-blur-lg shadow-md w-full">
-  <Link href="/Home" passHref>
+  <Link href="/" passHref>
     <Image
       src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN"
       alt="Logo"
@@ -46,7 +46,7 @@ const Header: React.FC = () => (
   </h1>
 
   <div className="flex items-center space-x-4">
-    <Link href="/DonorDashboard" passHref>
+    <Link href="/Home" passHref>
       <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
         Home
       </button>

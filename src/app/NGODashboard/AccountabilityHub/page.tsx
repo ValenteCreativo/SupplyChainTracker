@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "src/components/UI/card
 import CampaignHistoryList from 'src/components/NGO-Dashboard/CampaignHistoryList'
 import ImpactScoreGraph from 'src/components/NGO-Dashboard/ImpactScoreGraph'
 import ReputationChart from 'src/components/NGO-Dashboard/ReputationChart'
+import DonationHistoryChart from 'src/components/NGO-Dashboard/DonationHistoryChart' // New donation chart
 import Image from 'next/image'
 
 const CampaignHistory: React.FC = () => {
@@ -23,9 +24,8 @@ const CampaignHistory: React.FC = () => {
           />
         </Link>
 
-        {/* Título centrado */}
         <h1 className="text-3xl font-bold text-center text-[#4A3F35] absolute left-1/2 transform -translate-x-1/2">
-          Historical Campaign Analytics
+          Accountability Hub
         </h1>
 
         <div className="flex items-center space-x-4">
@@ -37,19 +37,22 @@ const CampaignHistory: React.FC = () => {
         </div>
       </header>
 
-      {/* Ajuste de padding-top responsivo */}
       <main className="flex-grow p-4 md:p-8 space-y-8 pt-[120px] md:pt-[140px]">
         <Tabs defaultValue="campaigns" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
             <TabsTrigger value="campaigns">Campaigns</TabsTrigger>
             <TabsTrigger value="impact">Impact Score</TabsTrigger>
             <TabsTrigger value="reputation">Reputation</TabsTrigger>
+            <TabsTrigger value="donations">Donation History</TabsTrigger>
           </TabsList>
 
           <TabsContent value="campaigns">
             <Card>
               <CardHeader>
                 <CardTitle>Campaign History</CardTitle>
+                <p className="text-sm text-gray-500">
+                  <Link href="https://base-sepolia.easscan.org/attestation/view/0x0e8c8a4d811e0962672261697e11fda898ca0857b81a22247f8c535778533dd7" target="_blank" className="underline hover:text-[#D6BA8A]">View NGO Registration</Link>
+                </p>
               </CardHeader>
               <CardContent>
                 <CampaignHistoryList />
@@ -78,6 +81,17 @@ const CampaignHistory: React.FC = () => {
               </CardContent>
             </Card>
           </TabsContent>
+
+          <TabsContent value="donations">
+            <Card>
+              <CardHeader>
+                <CardTitle>Donation History</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <DonationHistoryChart />
+              </CardContent>
+            </Card>
+          </TabsContent>
         </Tabs>
       </main>
 
@@ -90,4 +104,4 @@ const CampaignHistory: React.FC = () => {
   )
 }
 
-export default CampaignHistory
+export default CampaignHistory;
