@@ -10,22 +10,24 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9]">
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-white bg-opacity-70 backdrop-blur-lg shadow-md">
-        <Image
-          src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN"
-          alt="Logo"
-          width={100}
-          height={50}
-        />
-        <div className="flex items-center space-x-4">
-          <Link href="/Home" passHref>
-            <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
-              Launch App
-            </button>
-          </Link>
-        </div>
-      </header>
+  <Link href="/" passHref>
+    <Image
+      src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN"
+      alt="Logo"
+      width={100}
+      height={50}
+      className="cursor-pointer"
+    />
+  </Link>
+  <div className="flex items-center space-x-4">
+    <Link href="/Home" passHref>
+      <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
+        Launch App
+      </button>
+    </Link>
+  </div>
+</header>
   
       {/* Main content */}
       <main className="pt-32 pb-12">
