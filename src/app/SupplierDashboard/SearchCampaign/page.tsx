@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "src/components/UI/Tabs";
@@ -9,25 +9,45 @@ import { Button } from "src/components/UI/button";
 import { Input } from "src/components/UI/input";
 import { Toggle } from "src/components/UI/toggle";
 import { MapPin, List } from 'lucide-react';
-import MapboxCampaign from 'src/components/Supplier-Dashboard/MapboxCampaigns'; // Cambia esta ruta según corresponda
+import MapboxCampaign from 'src/components/Supplier-Dashboard/MapboxCampaigns'; // Adjust this path as needed
 
 const SearchCampaigns: React.FC = () => {
-  const [view, setView] = useState<'list' | 'map'>('map');
+  const [view, setView] = useState<'list' | 'map'>('list');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
+
+  // Function to get user location
+  const getUserLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setUserLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+      });
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  };
+
+  useEffect(() => {
+    getUserLocation(); // Get user location on component mount
+  }, []);
 
   const campaigns = [
     { name: "Blankets and Hygiene Products for Women with Disabilities", category: "In-kind", location: "Guatemala", goal: "Help Needed" },
     { name: "River Magdalena Clean-Up Campaign", category: "Volunteer", location: "Mexico City", goal: "Help Needed" },
     { name: "Rainwater Harvesting Solution", category: "Monetary", location: "Colombia", goal: "5000 USD" },
-    { name: "Support for Women's Shelters", category: "In-kind", location: "Chile", goal: "Help Needed" },
+    { name: "Support for Women's Shelters", category: "In-kind", location: "Peru", goal: "Help Needed" },
     { name: "Education Resources for Children", category: "Monetary", location: "Mexico", goal: "3000 USD" },
     { name: "Food Distribution for Vulnerable Families", category: "In-kind", location: "Brazil", goal: "Help Needed" },
-    { name: "Semilla Azul A.C.", category: "Donations", location: "Acapulco, Mexico", goal: "Centro de acopio para ayudar a la población afectada por el huracán." },
+    { name: "Semilla Azul A.C.", category: "Donations", location: "Acapulco, Mexico", goal: "Collection center to help the population affected by the hurricane." },
   ];
 
-  const filteredCampaigns = categoryFilter === 'all' 
-    ? campaigns 
-    : campaigns.filter(campaign => campaign.category === categoryFilter);
+  // Filter campaigns based on user location
+  const localCampaigns = userLocation 
+    ? campaigns.filter(campaign => campaign.location.includes("Mexico")) // Adjust logic as necessary
+    : campaigns;
 
   return (
     <div className="min-h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col">
@@ -123,11 +143,11 @@ const SearchCampaigns: React.FC = () => {
               <CardContent>
                 {view === 'map' ? (
                   <div className="h-96 bg-gray-200 flex items-center justify-center rounded-lg">
-                    <MapboxCampaign /> {/* Aquí se muestra el mapa */}
+                    <MapboxCampaign /> {/* Here the map is displayed */}
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {filteredCampaigns.map((campaign, index) => (
+                    {campaigns.map((campaign, index) => (
                       <Card key={index}>
                         <CardHeader>
                           <CardTitle className="text-sm">{campaign.name}</CardTitle>
@@ -136,7 +156,12 @@ const SearchCampaigns: React.FC = () => {
                           <p className="text-sm"><strong>Category:</strong> {campaign.category}</p>
                           <p className="text-sm"><strong>Location:</strong> {campaign.location}</p>
                           <p className="text-sm"><strong>Goal:</strong> {campaign.goal}</p>
-                          <Button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity w-full mt-4">Donate</Button>
+                          {/* Added button for Semilla Azul A.C. */}
+                          <Button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity w-full mt-4">
+                            {campaign.name === "Semilla Azul A.C." ? "Check Recollection Point" : 
+                              (campaign.category === "Volunteer" ? "Apply as Volunteer" :
+                              (campaign.category === "Monetary" ? "Donate" : "Check Recollection Point"))}
+                          </Button>
                         </CardContent>
                       </Card>
                     ))}
@@ -155,13 +180,13 @@ const SearchCampaigns: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <Card>
                     <CardHeader>
-                      <CardTitle>{campaigns[campaigns.length - 1].name}</CardTitle> {/* Añadido Semilla Azul aquí */}
+                      <CardTitle className="text-sm">Semilla Azul A.C.</CardTitle> {/* Featured Campaign */}
                     </CardHeader>
                     <CardContent>
-                      <p className="text-xs"><strong>Category:</strong> {campaigns[campaigns.length - 1].category}</p>
-                      <p className="text-xs"><strong>Location:</strong> {campaigns[campaigns.length - 1].location}</p>
-                      <p className="text-xs"><strong>Goal:</strong> {campaigns[campaigns.length - 1].goal}</p>
-                      <Button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity w-full mt-4">Donate</Button>
+                      <p className="text-sm"><strong>Category:</strong> Donations</p>
+                      <p className="text-sm"><strong>Location:</strong> Acapulco, Mexico</p>
+                      <p className="text-sm"><strong>Goal:</strong> Collection center to help the population affected by the hurricane.</p>
+                      <Button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity w-full mt-4">Check Recollection Point</Button>
                     </CardContent>
                   </Card>
                 </div>
@@ -175,12 +200,44 @@ const SearchCampaigns: React.FC = () => {
                 <CardTitle>Local Campaigns</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Local campaigns will be displayed here.</p>
+                {view === 'map' ? (
+                  <div className="h-96 bg-gray-200 flex items-center justify-center rounded-lg">
+                    <MapboxCampaign /> {/* Here the map is displayed */}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {localCampaigns.map((campaign, index) => (
+                      <Card key={index}>
+                        <CardHeader>
+                          <CardTitle className="text-sm">{campaign.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm"><strong>Category:</strong> {campaign.category}</p>
+                          <p className="text-sm"><strong>Location:</strong> {campaign.location}</p>
+                          <p className="text-sm"><strong>Goal:</strong> {campaign.goal}</p>
+                          {/* Added button for Semilla Azul A.C. */}
+                          <Button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity w-full mt-4">
+                            {campaign.name === "Semilla Azul A.C." ? "Check Recollection Point" : 
+                              (campaign.category === "Volunteer" ? "Apply as Volunteer" :
+                              (campaign.category === "Monetary" ? "Donate" : "Check Recollection Point"))}
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </TabsContent>
         </Tabs>
       </main>
+      {/* Footer */}
+      <footer className="bg-[#4A3F35] text-white py-8 mt-16 w-full flex-shrink-0">
+        <div className="container mx-auto text-center">
+          <p>From Mexico with 🩵. Open source available at: <a href="https://github.com/ValenteCreativo/SupplyChainTracker" className="underline hover:text-[#D6BA8A]">GitHub</a></p>
+        </div>
+      </footer>
+      
     </div>
   );
 };

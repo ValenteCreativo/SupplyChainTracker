@@ -30,9 +30,9 @@ const campaigns = [
     id: 4,
     title: "Support for Women's Shelters",
     category: "In-kind",
-    location: [-33.4489, -70.6693], // Chile
+    location: [-9.1900, -75.0152], // Perú
     goal: "Help Needed"
-  },
+},
   {
     id: 5,
     title: "Education Resources for Children",
@@ -53,7 +53,7 @@ const MapboxMap = () => {
   const [currentMarker, setCurrentMarker] = useState<number | null>(null);
 
   return (
-    <div className="w-full max-w-3xl h-[400px] rounded-xl shadow-lg mx-auto">
+    <div className="w-full max-w-3xl h-[360px] rounded-xl shadow-lg mx-auto">
       <Map
         initialViewState={{
           longitude: -99.133209,
