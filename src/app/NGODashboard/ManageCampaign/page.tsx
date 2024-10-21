@@ -14,7 +14,7 @@ import Image from 'next/image'
 const ManageCampaign: React.FC = () => {
   return (
     <div className="min-h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col">
-      <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-white bg-opacity-70 backdrop-blur-lg shadow-md w-full">
+      <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-[#388E3C] bg-opacity-90 backdrop-blur-lg shadow-md w-full">
         <Link href="/" passHref>
           <Image
             src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN"

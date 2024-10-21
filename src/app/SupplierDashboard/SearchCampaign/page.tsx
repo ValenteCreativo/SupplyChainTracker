@@ -55,7 +55,8 @@ const SearchCampaigns: React.FC = () => {
 
   return (
     <div className="min-h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col">
-      <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-white bg-opacity-70 backdrop-blur-lg shadow-md w-full">
+      <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-[#42A5F5] bg-opacity-90 backdrop-blur-lg shadow-md w-full">
+
         <Link href="/" passHref>
           <Image
             src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmXjeU4gEnrSZ5Bd4Yn9oTbCMRxPYCbQX5sZeHeJUba5mN"
@@ -233,6 +234,11 @@ const SearchCampaigns: React.FC = () => {
           </TabsContent>
         </Tabs>
       </main>
+      <footer className="bg-[#4A3F35] text-white py-8 mt-16 w-full flex-shrink-0">
+        <div className="container mx-auto text-center">
+          <p>From Mexico with 🩵. Open source available at: <a href="https://github.com/ValenteCreativo/SupplyChainTracker" className="underline hover:text-[#D6BA8A]">Github</a></p>
+        </div>
+      </footer>
     </div>
   );
 };
