@@ -140,12 +140,26 @@ export default function LandingPage() {
   <div className="container mx-auto px-4">
     <h2 className="text-4xl font-bold text-center text-[#A48460] mb-12">Our technologies</h2>
     <div className="flex flex-col md:flex-row items-center fade-in">
-      <div className="md:w-1/2 mb-8 md:mb-0 order-2"> 
-        <Image src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmfZku3tRmPfpnMXxPpyPUTmyFLuAb9KBTKvQXs6J7nmZ2" alt="Aid Recipients" width={500} height={300} className="rounded-lg" />
+      <div className="md:w-1/2 mb-8 md:mb-0 order-2">
+        <Image 
+          src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmfZku3tRmPfpnMXxPpyPUTmyFLuAb9KBTKvQXs6J7nmZ2" 
+          alt="Aid Recipients" 
+          width={500} 
+          height={300} 
+          className="rounded-lg" 
+        />
       </div>
       <div className="md:w-1/2 md:pl-8 order-1">
         <p className="text-lg text-[#4A3F35]">
-          Our software operates through <strong className="text-[#558B6E]">Attestations</strong> running on the <strong className="text-[#558B6E]">Base Blockchain network</strong>, ensuring speed, security, and affordable transaction fees. With this mechanism, users can overview and verify the status of the Donation Cycle in real-time, with immutability, transparency, and traceability, guaranteeing <strong className="text-[#558B6E]">trust and confidence throughout the entire process.</strong>
+          Our software operates through <strong className="text-[#558B6E]">
+            <a href="https://attest.org/" style={{textDecoration: "underline"}}>
+              Attestations (EAS)
+            </a>
+          </strong> running on the <strong className="text-[#558B6E]">Base Blockchain network</strong>, 
+          ensuring speed, security, and affordable transaction fees. With this mechanism, users can 
+          overview and verify the status of the Donation Cycle in real-time, with immutability, 
+          transparency, and traceability, guaranteeing <strong className="text-[#558B6E]">
+          trust and confidence throughout the entire process.</strong>
         </p>
       </div>
     </div>
@@ -178,7 +192,7 @@ export default function LandingPage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <strong className="text-[#558B6E]">Dec 2024 - Development Phase:</strong>
-            <p className="text-lg text-[#4A3F35]">Begin the creation of a beta version, integrating user-generated data to test and refine the core functionalities.</p>
+            <p className="text-lg text-[#4A3F35]">Begin the creation of a beta version, integrating Smart Contracts for donations and user-generated data to test and refine the core functionalities.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <strong className="text-[#558B6E]">Q1 2025 - Deployment Phase:</strong>
