@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CreateCampaign: React.FC = () => {
+const RegisterNGO: React.FC = () => {
   return (
     <div className="h-screen w-screen bg-gradient-to-b from-[#F6F1EB] to-[#E8E2D9] flex flex-col justify-between">
       <header className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center p-4 bg-white bg-opacity-70 backdrop-blur-lg shadow-md w-full">
@@ -19,7 +19,7 @@ const CreateCampaign: React.FC = () => {
         </Link>
 
         <h1 className="text-3xl font-bold text-center text-[#4A3F35] absolute left-1/2 transform -translate-x-1/2">
-          Create Campaign
+          Register NGO
         </h1>
 
         <div className="flex items-center space-x-4">
@@ -33,32 +33,33 @@ const CreateCampaign: React.FC = () => {
 
       <main className="flex-grow p-8 pt-32">
         <div className="container mx-auto max-w-4xl bg-white shadow-lg rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 text-center text-[#4A3F35]">Create Your Campaign</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#4A3F35]">Register Your NGO</h2>
           <p className="text-gray-600 mb-6">
-            Creating a campaign is your opportunity to make a significant impact in your community. 
-            To get started, you'll need to fill out the following key information:
+            Registering your NGO is an essential step to gain visibility and credibility in the nonprofit sector. 
+            Here are the key details you'll need to provide:
           </p>
           <ul className="list-disc list-inside mb-6">
-            <li><strong>Campaign Name:</strong> Choose a compelling name for your campaign.</li>
-            <li><strong>Description:</strong> Provide a brief overview of the campaign's purpose and goals.</li>
-            <li><strong>Fundraising Goal:</strong> Specify the amount of money needed to achieve your campaign's objectives.</li>
-            <li><strong>Milestones:</strong> Outline specific goals you aim to reach throughout the campaign, helping to track progress and celebrate achievements.</li>
+            <li><strong>NGO Name:</strong> Choose a unique name that reflects your mission.</li>
+            <li><strong>Mission:</strong> Provide a brief overview of your NGO's purpose and goals.</li>
+            <li><strong>Category:</strong> Include a category for your project either Social, Environmental or Animal</li>
+            <li><strong>Website:</strong> If available, provide a link to your NGO's website for more information.</li>
+            
           </ul>
           <p className="text-gray-600 mb-6">
-            Once you've gathered all this information, you can submit your campaign for approval. 
-            This will allow you to begin fundraising and making a real difference in the lives of those you aim to support.
+            Once you've gathered all the required information, you can proceed to register your NGO. 
+            This process will help you build trust with donors and the community, allowing you to further your mission.
           </p>
           <p className="text-gray-600 mb-6">
-            To create your campaign, please visit the attestation page and follow the instructions provided. 
-            This will ensure that your campaign details are recorded in a secure and transparent manner.
+            To register your NGO, please visit the attestation page and follow the instructions provided. 
+            This will securely record your NGO's details in the Blockchain system.
           </p>
           <Link
-            href="https://base-sepolia.easscan.org/attestation/attestWithSchema/0xeff691af0f7bb45f8a061eaa59933e6aca6d151854289ed5c2e0edec5906d71a"
+            href="https://base-sepolia.easscan.org/attestation/attestWithSchema/0xbe316d1b4853bff8f96d3addef2aaaada363d29e7a04fbf3888278d696752616"
             className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity inline-block mt-4"
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Create Campaign
+            Register NGO
           </Link>
         </div>
       </main>
@@ -72,4 +73,4 @@ const CreateCampaign: React.FC = () => {
   );
 };
 
-export default CreateCampaign;
+export default RegisterNGO;

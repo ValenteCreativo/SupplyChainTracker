@@ -58,8 +58,8 @@ const SupplierDashboard: React.FC = () => {
             {/* Network Visualization */}
             <div className="flex flex-col items-center bg-white shadow-lg p-6 rounded-lg">
               <h2 className="text-xl font-semibold mb-4 text-[#4A3F35]">Peace Network</h2>
-              <p className="text-center text-gray-600 mb-6">Visualize how peace is built in real-time through campaigns and milestones.</p>
-              <Link href="/SupplierDashboard/NetworkVisualization" passHref>
+              <p className="text-center text-gray-600 mb-6">Visualize how peace is built in real-time through all the NGOs, campaigns, milestones and impact report Attestations made.</p>
+              <Link href="/SupplierDashboard/PeaceNetwork" passHref>
                 <button className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity">
                   Visualize Network
                 </button>
