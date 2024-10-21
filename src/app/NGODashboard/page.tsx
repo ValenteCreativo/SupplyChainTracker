@@ -78,6 +78,14 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <div className="mt-8 text-center text-gray-700">
+            <p>
+              This software runs on Base Sepolia - if you need funds to pay for your transaction fees, access this faucet: 
+              <a href="https://faucets.chain.link/base-sepolia" className="underline hover:text-[#D6BA8A]"> faucet</a>.
+            </p>
+          </div>
+          
       </main>
 
       <footer className="bg-[#4A3F35] text-white py-8 mt-16 w-full flex-shrink-0">

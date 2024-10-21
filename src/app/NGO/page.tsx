@@ -41,6 +41,7 @@ const NGO: React.FC = () => {
               </button>
             </Link>
           </div>
+          
         </section>
       </main>
 
