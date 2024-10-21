@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Wallet, User, Star, ThumbsUp, MessageSquare, Search, Filter } from 'lucide-react'
+import SignupButton from 'src/components/OnChainKitTools/SignupButton'
 
 // Types
 type Idea = {
@@ -64,12 +65,14 @@ const ReputationBadge: React.FC<ReputationBadgeProps> = ({ score }) => (
 )
 
 // WalletConnect Component
-const WalletConnect: React.FC = () => (
-  <button className="flex items-center bg-[#4A3F35] text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-opacity">
-    <Wallet className="w-4 h-4 mr-2" />
-    Connect Wallet
-  </button>
+const WalletConnect: React.FC = () => ( 
+    <div className="space-y-6 flex flex-col items-center mt-8">
+      <SignupButton className="bg-gradient-to-r from-[#D6BA8A] to-[#C2A676] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity" />
+      
+    </div>
+  
 )
+
 
 // IdeaCard Component
 const IdeaCard: React.FC<IdeaCardProps> = ({ title, author, content, likes, comments, authorReputation, tags }) => (
